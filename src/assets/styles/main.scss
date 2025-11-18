@@ -3,17 +3,39 @@
  * Do not include SCSS code in this file.
  */
 
- /**
+/**
  * Import dependencies
  */
-@use "dependencies";
+
+// 1. Settings
+@import "settings/variables";
+
+// 2. Tools
+@import "tools/mixins";
+@import "tools/functions";
+
+// 3. Generic
+@import "generic/reset";
+
+// 4. Elements
+@import "elements/base";
+
+// 5. Objects
+@import "objects/layout";
+@import "objects/grid";
+
+// 6. Components (BEM)
+@import "components/header";
+@import "components/footer";
+@import "components/card";
+
+// 7. Utilities
+@import "utilities/helpers";
 
 /**
- * Import layouts
- * It's a best practice to use a different partial for each page
+ * Page layouts
  */
-
- @use "layouts/home";
+@import "layouts/home";
 
 /**
  * Do NOT include anything else in this file!
