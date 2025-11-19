@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
+  <!--Head-->
   <head>
+    <!--Codificación-->
     <meta charset="utf-8">
+    <!--Responsive-->
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <!-- Font Awesome desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <!--Title-->
     <title>UOC Boilerplate</title>
+    <!--Descripcón-->
+    <meta name="description" content="Por completar">
+    <!--Autor-->
+    <meta name="author" content="Santiago García">
   </head>
+  <!--Body-->
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <!--Header-->
+    <include src="./views/header.html"></include>
+
+    <!--main-->
+    <main>
+      <p>Hola</p>
+    </main>
+
+    <!--Footer-->
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <!--Scripts-->
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

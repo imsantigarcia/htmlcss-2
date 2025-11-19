@@ -1,0 +1,43 @@
+// Bloque principal del header
+.header {
+
+  // Contenedor del navegador principal
+  &__nav {
+    // Estructura del nav
+  }
+
+  // Elemento del logo dentro del header
+  &__logo {
+    // Contenedor del logo
+
+    img {
+      // Imagen del logo
+    }
+  }
+
+  // Lista del menú de navegación
+  &__nav-list {
+    // UL del menú
+  }
+
+  // Item del menú de navegación
+  &__nav-item {
+    // LI del menú
+  }
+
+  // Enlaces de cada elemento del menú
+  &__nav-link {
+    // Link del menú
+
+    &:hover {
+      // Hover de los enlaces
+    }
+  }
+
+  // Estado activo del item de navegación
+  &__nav-item--active {
+    .header__nav-link {
+      // Estilo del enlace cuando el item está activo
+    }
+  }
+}

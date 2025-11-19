@@ -1,0 +1,54 @@
+// Bloque principal del footer
+.footer {
+
+  // Elemento del logo
+  &__logo {
+    // Contenedor del logo
+
+    img {
+      // Imagen del logo
+    }
+  }
+
+  // Lista del menú del footer
+  &__nav-list {
+    // UL del menú
+  }
+
+  // Elemento de la lista del menú
+  &__nav-item {
+    // LI del menú
+  }
+
+  // Enlaces del menú del footer
+  &__nav-link {
+    // Link del menú
+
+    &:hover {
+      // Hover del enlace
+    }
+  }
+
+  // Lista de enlaces a redes sociales
+  &__social-list {
+    // UL de redes sociales
+  }
+
+  // Elemento individual de cada red social
+  &__social-item {
+    // LI de red social
+  }
+
+  // Enlace hacia la red social (icono clicable)
+  &__social-link {
+    // Link de red social
+
+    &:hover {
+      // Hover del link
+    }
+
+    i {
+      // Icono de FontAwesome
+    }
+  }
+}
