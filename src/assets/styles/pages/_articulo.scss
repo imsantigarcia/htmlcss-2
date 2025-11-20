@@ -1,0 +1,96 @@
+/* ==========================================================
+   ARTICLE
+   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
+   ========================================================== */
+
+@layer components {
+  .article {
+    container-type: inline-size;
+    container-name: article;
+
+    /* HEADER */
+    &__heading {}
+    &__title {}
+    &__author {}
+
+    /* DESTACADO */
+    &__featured {}
+    &__featured-text {}
+    &__featured-description {}
+
+    /* IMÁGENES */
+    &__figure {}
+    &__img {}
+
+    /* CONTENIDO */
+    &__content {}
+    &__paragraph {}
+
+    /* TITULARES */
+    &__h2 {}
+
+    /* CITA */
+    &__quote {}
+
+    /* LISTAS */
+    &__list {}
+    &__list-item {}
+  }
+}
+
+/* ==========================================================
+   PSEUDOCLASES FUNCIONALES
+   ========================================================== */
+
+/* :has() — ej. contenedor que contiene una cita */
+.article__content:has(.article__quote) {}
+
+/* :is() — estilos agrupados de titulares */
+.article :is(h2, h3) {}
+
+
+/* ==========================================================
+   CONTAINER QUERIES
+   ========================================================== */
+
+@container article (min-width: 320px) {
+  .article {
+    &__heading {}
+    &__content {}
+  }
+}
+
+@container article (min-width: 480px) {
+  .article {
+    &__heading {}
+    &__content {}
+  }
+}
+
+@container article (min-width: 720px) {
+  .article {
+    &__heading {}
+    &__content {}
+  }
+}
+
+@container article (min-width: 1024px) {
+  .article {
+    &__heading {}
+    &__content {}
+  }
+}
+
+@container article (min-width: 1280px) {
+  .article {
+    &__heading {}
+    &__content {}
+  }
+}
+
+@container article (min-width: 1920px) {
+  .article {
+    &__heading {}
+    &__content {}
+  }
+}

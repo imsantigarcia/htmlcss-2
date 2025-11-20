@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <!--Head-->
+  <head>
+    <!--Codificación-->
+    <meta charset="utf-8">
+    <!--Responsive-->
+    <meta name="viewport" content="width=device-width">
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <!-- Font Awesome desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--Title-->
+    <title>UOC Boilerplate</title>
+    <!--Descripcón-->
+    <meta name="description" content="Por completar">
+    <!--Autor-->
+    <meta name="author" content="Santiago García">
+  </head>
+  <!--Body-->
+  <body>
+    <!--Header-->
+    <include src="./views/header.html"></include>
+
+    <!--main-->
+    <main class="wrapper">
+
+        <!--Artículo-->
+
+        <article class="article">
+
+            <!--Header-->
+            <div class="article__heading">
+                <!--H1-->
+                <h1 class="article__title">Título del artículo</h1>
+                <!--Autor-->
+                <p class="article__author">Autor</p>
+            </div>
+
+            <!--Texto destacado-->
+            <section class="article__featured">
+
+                <!--Texto grande-->
+                <p class="article__featured-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+
+                <!--Texto pequqeño-->
+                <p class="article__featured-description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+
+            </section>
+
+            <!--Imagen 1-->
+
+            <figure class="article__figure">
+                <img class="article__img" height="" width="" src="" alt="" loading="lazy">
+                <figcaption>Pie de la imagen</figcaption>
+            </figure>
+
+            <!--Párrafos-->
+            <div class="article__content">
+                
+                <!--Título 2-->
+                <h2 class="article__h2">Título 2</h2>
+
+                <!--Párrafo 1-->
+                <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales massa vitae dapibus pretium. Etiam et ipsum tortor. Proin faucibus felis justo, vel porttitor turpis blandit sit amet. Phasellus facilisis sit amet ante sed consectetur.</p>
+
+                <!--Párrafo 2-->
+                <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales massa vitae dapibus pretium. Etiam et ipsum tortor. Proin faucibus felis justo, vel porttitor turpis blandit sit amet. Phasellus facilisis sit amet ante sed consectetur.</p>
+
+                <!--Cita-->
+                <blockquote class="article__quote">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </blockquote>
+
+                <!--Título 2-->
+                <h2 class="article__h2">Título 2</h2>
+
+                <!--Párrafo 3-->
+                <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales massa vitae dapibus pretium. Etiam et ipsum tortor. Proin faucibus felis justo, vel porttitor turpis blandit sit amet. Phasellus facilisis sit amet ante sed consectetur.</p>
+
+                <!--Lista desordenada-->
+                <ul class="article__list">
+                    <!--List item 1-->
+                    <li class="article__list-item">Item 1</li>
+                    <!--List item 1-->
+                    <li class="article__list-item">Item 2</li>
+                    <!--List item 1-->
+                    <li class="article__list-item">Item 3</li>
+                </ul>
+
+                 <!--Párrafo 4-->
+                <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales massa vitae dapibus pretium. Etiam et ipsum tortor. Proin faucibus felis justo, vel porttitor turpis blandit sit amet. Phasellus facilisis sit amet ante sed consectetur.</p>
+            </div>
+
+            <!--Imagen 2-->
+
+            <figure class="article__figure">
+                <img class="article__img" height="" width="" src="" alt="" loading="lazy">
+                <figcaption>Pie de la imagen</figcaption>
+            </figure>
+
+        </article>
+
+    </main>
+
+    <!--Footer-->
+    <include src="./views/footer.html"></include>
+
+    <!--Scripts-->
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
