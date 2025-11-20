@@ -1,0 +1,69 @@
+/* ==========================================================
+   EXTRA
+   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
+   ========================================================== */
+
+@layer components {
+  .extra {
+    container-type: inline-size;
+    container-name: extra;
+
+    /* HEADER */
+    &__header {}
+    &__heading {}
+    &__description {}
+
+    /* GALERÍA */
+    &__gallery {}
+    &__gallery-item {}
+    &__gallery-figure {}
+    &__gallery-img {}
+    &__gallery-caption {}
+  }
+}
+
+/* ==========================================================
+   CONTAINER QUERIES y BREAKPOINTS DEL PROYECTO
+   ========================================================== */
+
+@container extra (min-width: 320px) {
+  .extra {
+    &__gallery {}
+    &__gallery-item {}
+  }
+}
+
+@container extra (min-width: 480px) {
+  .extra {
+    &__gallery {}
+    &__gallery-item {}
+  }
+}
+
+@container extra (min-width: 720px) {
+  .extra {
+    &__gallery {}
+    &__gallery-item {}
+  }
+}
+
+@container extra (min-width: 1024px) {
+  .extra {
+    &__gallery {}
+    &__gallery-item {}
+  }
+}
+
+@container extra (min-width: 1280px) {
+  .extra {
+    &__gallery {}
+    &__gallery-item {}
+  }
+}
+
+@container extra (min-width: 1920px) {
+  .extra {
+    &__gallery {}
+    &__gallery-item {}
+  }
+}
