@@ -1,0 +1,72 @@
+/* ============================================
+   SPEAKERS
+   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
+   ============================================ */
+
+@layer components {
+  .speakers {
+    container-type: inline-size;
+    container-name: speakers;
+
+    &__header {}
+    &__heading {}
+    &__list {}
+    &__item {}
+    &__img {}
+    &__info {}
+    &__name {}
+    &__description {}
+  }
+}
+
+/* ============================================
+   CONTAINER QUERIES — BREAKPOINTS DEL PROYECTO
+   ============================================ */
+
+@container speakers (min-width: 320px) {
+  .speakers {
+    &__header {}
+    &__list {}
+    &__item {}
+  }
+}
+
+@container speakers (min-width: 480px) {
+  .speakers {
+    &__header {}
+    &__list {}
+    &__item {}
+  }
+}
+
+@container speakers (min-width: 720px) {
+  .speakers {
+    &__header {}
+    &__list {}
+    &__item {}
+  }
+}
+
+@container speakers (min-width: 1024px) {
+  .speakers {
+    &__header {}
+    &__list {}
+    &__item {}
+  }
+}
+
+@container speakers (min-width: 1280px) {
+  .speakers {
+    &__header {}
+    &__list {}
+    &__item {}
+  }
+}
+
+@container speakers (min-width: 1920px) {
+  .speakers {
+    &__header {}
+    &__list {}
+    &__item {}
+  }
+}
