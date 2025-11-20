@@ -1,0 +1,114 @@
+/* ==========================================================
+   INDEX
+   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
+   ========================================================== */
+
+@layer components {
+  .home {
+    container-type: inline-size;
+    container-name: home;
+
+    /* POSTER */
+    &__poster {}
+
+    /* HEADER */
+    &__header {}
+    &__heading {}
+    &__description {}
+
+    /* IMAGEN PRINCIPAL */
+    &__figure {}
+    &__img {}
+
+    /* INFORMACIÓN */
+    &__info {}
+    &__date {}
+    &__location {}
+
+    /* NAVEGACIÓN */
+    &__nav {}
+    &__link {}
+  }
+}
+
+/* ==========================================================
+   @SUPPORTS
+   ========================================================== */
+
+/* Soporte Grid */
+@supports (display: grid) {
+  .home {
+    &__poster {
+      /* grid-template-areas: ... */
+      /* grid-template-columns: ... */
+      /* grid-template-rows: ... */
+    }
+  }
+}
+
+/* Fallback para navegadores que NO soportan Grid */
+@supports not (display: grid) {
+  .home {
+    &__poster {
+      /* flex layout fallback */
+    }
+  }
+}
+
+/* ==========================================================
+   CONTAINER QUERIES y BREAKPOINTS DEL PROYECTO
+   ========================================================== */
+
+@container home (min-width: 320px) {
+  .home {
+    &__poster {}
+    &__header {}
+    &__info {}
+    &__nav {}
+  }
+}
+
+@container home (min-width: 480px) {
+  .home {
+    &__poster {}
+    &__header {}
+    &__info {}
+    &__nav {}
+  }
+}
+
+@container home (min-width: 720px) {
+  .home {
+    &__poster {}
+    &__header {}
+    &__info {}
+    &__nav {}
+  }
+}
+
+@container home (min-width: 1024px) {
+  .home {
+    &__poster {}
+    &__header {}
+    &__info {}
+    &__nav {}
+  }
+}
+
+@container home (min-width: 1280px) {
+  .home {
+    &__poster {}
+    &__header {}
+    &__info {}
+    &__nav {}
+  }
+}
+
+@container home (min-width: 1920px) {
+  .home {
+    &__poster {}
+    &__header {}
+    &__info {}
+    &__nav {}
+  }
+}
