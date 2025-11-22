@@ -1,0 +1,21 @@
+// ============================
+// Paleta de colores
+// ============================
+
+// Colores principales
+$color-primary: oklch(65% 0.12 40);      // Tierra cálida
+$color-secondary: oklch(82% 0.06 70);    // Madera
+$color-accent: oklch(70% 0.10 150);      // Verde
+
+// Colores complementarios
+$color-dark: oklch(40% 0.06 35);         // Cacao
+$color-light: oklch(95% 0.02 80);        // Harina
+$color-accent-warm: oklch(78% 0.12 90);  // Cúrcuma
+$color-accent-cool: oklch(68% 0.05 210); // Arcilla
+
+// Grises tierra
+$gray-900: oklch(28% 0.01 70);
+$gray-700: oklch(45% 0.01 70);
+$gray-500: oklch(60% 0.01 70);
+$gray-300: oklch(78% 0.01 70);
+$gray-100: oklch(93% 0.01 70);

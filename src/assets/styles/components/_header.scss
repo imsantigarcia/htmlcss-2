@@ -1,18 +1,24 @@
 // Bloque principal del header
 .header {
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  color: $color-light;
+  padding: 2.3rem 0rem;
+  border-bottom: 1px solid;
+  border-color: $gray-100;
 
   // Contenedor del navegador principal
   &__nav {
     // Estructura del nav
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
   }
 
-  // Elemento del logo dentro del header
+  // Elemento del logo dentro del header  
   &__logo {
     // Contenedor del logo
+    text-decoration: none;
+    font-size: 1.6rem;
 
     img {
       // Imagen del logo
@@ -24,7 +30,7 @@
     // UL del menú
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     font-size: 1.2rem;
   }
 
@@ -51,3 +57,26 @@
     }
   }
 }
+
+// Versión de index.html
+
+.page--home .header {
+  background: black;   // o el color especial
+  border-bottom: none;       // sin borde
+  position: absolute;        // si quieres que flote encima del póster
+  width: 100%;
+  z-index: 10;
+
+  // Si la navbar debe ser clara sobre fondo de imagen
+  color: $color-light;
+
+  // Si los enlaces deben ser más visibles:
+  .header__nav-link {
+    color: $color-light;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

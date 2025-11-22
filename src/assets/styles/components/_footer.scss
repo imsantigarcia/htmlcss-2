@@ -1,13 +1,21 @@
 // Bloque principal del footer
 .footer {
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  color: $color-light;
+  padding: 2.5rem 0rem;
+
+  // Container del footer
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   // Elemento del logo
   &__logo {
     // Contenedor del logo
+    text-decoration: none;
+    font-size: 1.6rem;
 
     img {
       // Imagen del logo
@@ -19,7 +27,7 @@
     // UL del menú
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   // Elemento de la lista del menú
@@ -42,6 +50,8 @@
   // Lista de enlaces a redes sociales
   &__social-list {
     // UL de redes sociales
+    display: flex;
+    gap: 1rem;
   }
 
   // Elemento individual de cada red social

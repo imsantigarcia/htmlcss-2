@@ -8,14 +8,14 @@
  */
 
 // 1. Settings
+@import "generic/reset";
 @import "settings/variables";
+@import "settings/colors";
+@import "settings/icons";
 
 // 2. Tools
 @import "tools/mixins";
 @import "tools/functions";
-
-// 3. Generic
-@import "generic/reset";
 
 // 4. Elements
 @import "elements/base";

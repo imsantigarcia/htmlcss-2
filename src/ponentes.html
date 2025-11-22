@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <!--Animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!--Tipografía-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,100 +32,102 @@
     <include src="./views/header.html"></include>
 
     <!--main-->
-    <main class="wrapper speakers">
+    <main class="speakers">
 
-        <!--H1-->
-        <div class="speakers__header">
-            <h1 class="speakers__heading">Speakers</h1>
-        </div>
+        <section>
+            <!--H1-->
+            <div class="speakers__header">
+                <h1 class="speakers__heading">Speakers</h1>
+            </div>
 
-        <!--Speakers-->
-        <ul class="speakers__list">
+            <!--Speakers-->
+            <ul class="speakers__list wrapper">
 
-            <!--Speaker 1-->
-            <li class="speakers__item">
-                <!--Imagen-->
-                <img class="speakers__img" alt="" widht="" height="">
+                <!--Speaker 1-->
+                <li class="speakers__item">
+                    <!--Imagen-->
+                    <img class="speakers__img" alt="" widht="" height="" src="/src/assets/images/6.png">
 
-                <!--Datos-->
-                <div class="speakers__info">
-                    <!--H2-->
-                    <h2 class="speakers__name">Speaker one</h2>
-                    <!--Presentación-->
-                    <p class="speakers__description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </li>
+                    <!--Datos-->
+                    <div class="speakers__info">
+                        <!--H2-->
+                        <h2 class="speakers__name">Lucía Márquez</h2>
+                        <!--Presentación-->
+                        <p class="speakers__description">Chef y divulgadora gastronómica especializada en cocina mediterránea contemporánea.</p>
+                    </div>
+                </li>
 
-            <!--Speaker 2-->
-            <li class="speakers__item">
-                <!--Imagen-->
-                <img class="speakers__img" alt="" widht="" height="">
+                <!--Speaker 2-->
+                <li class="speakers__item">
+                    <!--Imagen-->
+                    <img class="speakers__img" alt="" widht="" height="" src="/src/assets/images/5.png">
 
-                <!--Datos-->
-                <div class="speakers__info">
-                    <!--H2-->
-                    <h2 class="speakers__name">Speaker one</h2>
-                    <!--Presentación-->
-                    <p class="speakers__description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </li>
+                    <!--Datos-->
+                    <div class="speakers__info">
+                        <!--H2-->
+                        <h2 class="speakers__name">Hiro Tanaka</h2>
+                        <!--Presentación-->
+                        <p class="speakers__description">Investigador culinario centrado en técnicas japonesas y procesos tradicionales de fermentación.</p>
+                    </div>
+                </li>
 
-            <!--Speaker 3-->
-            <li class="speakers__item">
-                <!--Imagen-->
-                <img class="speakers__img" alt="" widht="" height="">
+                <!--Speaker 3-->
+                <li class="speakers__item">
+                    <!--Imagen-->
+                    <img class="speakers__img" alt="" widht="" height="" src="/src/assets/images/4.png">
 
-                <!--Datos-->
-                <div class="speakers__info">
-                    <!--H2-->
-                    <h2 class="speakers__name">Speaker one</h2>
-                    <!--Presentación-->
-                    <p class="speakers__description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </li>
+                    <!--Datos-->
+                    <div class="speakers__info">
+                        <!--H2-->
+                        <h2 class="speakers__name">Marta Esquivel</h2>
+                        <!--Presentación-->
+                        <p class="speakers__description">Pastelera creativa que combina repostería clásica con tendencias modernas y sabores florales.</p>
+                    </div>
+                </li>
 
-            <!--Speaker 4-->
-            <li class="speakers__item">
-                <!--Imagen-->
-                <img class="speakers__img" alt="" widht="" height="">
+                <!--Speaker 4-->
+                <li class="speakers__item">
+                    <!--Imagen-->
+                    <img class="speakers__img" alt="" widht="" height="" src="/src/assets/images/3.png">
 
-                <!--Datos-->
-                <div class="speakers__info">
-                    <!--H2-->
-                    <h2 class="speakers__name">Speaker one</h2>
-                    <!--Presentación-->
-                    <p class="speakers__description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </li>
+                    <!--Datos-->
+                    <div class="speakers__info">
+                        <!--H2-->
+                        <h2 class="speakers__name">Enzo Berruti</h2>
+                        <!--Presentación-->
+                        <p class="speakers__description">Experto en cocina italiana que explora recetas regionales y métodos de cocción ancestrales.</p>
+                    </div>
+                </li>
 
-            <!--Speaker 5-->
-            <li class="speakers__item">
-                <!--Imagen-->
-                <img class="speakers__img" alt="" widht="" height="">
+                <!--Speaker 5-->
+                <li class="speakers__item">
+                    <!--Imagen-->
+                    <img class="speakers__img" alt="" widht="" height="" src="/src/assets/images/2.png">
 
-                <!--Datos-->
-                <div class="speakers__info">
-                    <!--H2-->
-                    <h2 class="speakers__name">Speaker one</h2>
-                    <!--Presentación-->
-                    <p class="speakers__description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </li>
+                    <!--Datos-->
+                    <div class="speakers__info">
+                        <!--H2-->
+                        <h2 class="speakers__name">Amara Johnson</h2>
+                        <!--Presentación-->
+                        <p class="speakers__description">Consultora culinaria enfocada en sostenibilidad, productos locales y experiencias sensoriales.</p>
+                    </div>
+                </li>
 
-            <!--Speaker 6-->
-            <li class="speakers__item">
-                <!--Imagen-->
-                <img class="speakers__img" alt="" widht="" height="">
+                <!--Speaker 6-->
+                <li class="speakers__item">
+                    <!--Imagen-->
+                    <img class="speakers__img" alt="" widht="" height="" src="/src/assets/images/1.png">
 
-                <!--Datos-->
-                <div class="speakers__info">
-                    <!--H2-->
-                    <h2 class="speakers__name">Speaker one</h2>
-                    <!--Presentación-->
-                    <p class="speakers__description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </li>
-        </ul>
+                    <!--Datos-->
+                    <div class="speakers__info">
+                        <!--H2-->
+                        <h2 class="speakers__name">Diego Alcázar</h2>
+                        <!--Presentación-->
+                        <p class="speakers__description">Chef experimental que fusiona cocina latinoamericana con técnicas contemporáneas de autor.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
     </main>
 
