@@ -2,6 +2,12 @@
 .footer {
   color: $color-light;
   padding: 2.5rem 0rem;
+  background-color: $color-fondo;
+
+  &__text {
+    color: $color-light;
+    font-weight: 500;
+  }
 
   // Container del footer
   &__container {
@@ -40,6 +46,7 @@
     // Link del menú
     text-decoration: none;
     font-size: 1.2rem;
+    color: $color-light;
 
     &:hover {
       // Hover del enlace
@@ -51,7 +58,7 @@
   &__social-list {
     // UL de redes sociales
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   // Elemento individual de cada red social
@@ -66,6 +73,7 @@
   // Enlace hacia la red social (icono clicable)
   &__social-link {
     // Link de red social
+    color: $color-light;
 
     &:hover {
       // Hover del link

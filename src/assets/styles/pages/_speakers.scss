@@ -7,6 +7,8 @@
    SPEAKERS (BASE: versión más pequeña)
    ============================================ */
 
+@layer components {
+
 .speakers {
   container-type: inline-size;
   container-name: speakers;
@@ -31,7 +33,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: space-between;
     width: 100%;
   }
@@ -74,7 +76,7 @@
     font-size: 1.1rem;
   }
 }
-
+}
 
 /* ============================================
    CONTAINER QUERIES y BREAKPOINTS DEL PROYECTO
