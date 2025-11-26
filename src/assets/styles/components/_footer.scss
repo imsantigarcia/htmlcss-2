@@ -1,86 +1,120 @@
-// Bloque principal del footer
-.footer {
-  color: $color-light;
-  padding: 2.5rem 0rem;
-  background-color: $color-fondo;
+/* ==========================================================
+   Footer
+   ========================================================== */
 
-  &__text {
+@layer base, components, overrides;
+
+/* ------------------------------
+   Base
+   ------------------------------ */
+
+@layer base {
+  .footer {
+    container-type: inline-size;
+    container-name: footer;
     color: $color-light;
-    font-weight: 500;
-  }
+    padding: 2.5rem 0;
+    background-color: $color-fondo;
 
-  // Container del footer
-  &__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  // Elemento del logo
-  &__logo {
-    // Contenedor del logo
-    text-decoration: none;
-    font-size: 1.6rem;
-
-    img {
-      // Imagen del logo
-    }
-  }
-
-  // Lista del menú del footer
-  &__nav-list {
-    // UL del menú
-    list-style-type: none;
-    display: flex;
-    gap: 3rem;
-  }
-
-  // Elemento de la lista del menú
-  &__nav-item {
-    // LI del menú
-  }
-
-  // Enlaces del menú del footer
-  &__nav-link {
-    // Link del menú
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: $color-light;
-
-    &:hover {
-      // Hover del enlace
-      text-decoration: underline;
-    }
-  }
-
-  // Lista de enlaces a redes sociales
-  &__social-list {
-    // UL de redes sociales
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  // Elemento individual de cada red social
-  &__social-item {
-    // LI de red social
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-    text-decoration: none;
-  }
-
-  // Enlace hacia la red social (icono clicable)
-  &__social-link {
-    // Link de red social
-    color: $color-light;
-
-    &:hover {
-      // Hover del link
+    &__text {
+      color: $color-light;
+      font-weight: 500;
     }
 
-    i {
-      // Icono de FontAwesome
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    /* Logo */
+    &__logo {
+      text-decoration: none;
+      font-size: 1.6rem;
+
+      img {}
+    }
+
+    /* Menú */
+    &__nav-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__nav-item {}
+
+    &__nav-link {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: $color-light;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* Redes sociales */
+    &__social-list {
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    &__social-item {
+      list-style-type: none;
+    }
+
+    &__social-link {
+      color: $color-light;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      i {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+/* -----------------------------------
+   Components
+   ----------------------------------- */
+
+@layer components {
+  /* Aquí puedes poner componentes extra si hiciera falta */
+}
+
+/* -----------------------------------
+   Overrides
+   ----------------------------------- */
+
+@layer overrides {
+
+  @container footer (min-width: 700px) {
+
+    .footer__container {
+      flex-direction: row;          /* DESKTOP → fila */
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      gap: 3rem;
+    }
+
+    .footer__nav-list {
+      flex-direction: row;          /* menú en fila */
+      gap: 3rem;
     }
   }
 }

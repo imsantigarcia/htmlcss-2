@@ -29,3 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Menú móvil
+
+const burger = document.querySelector('.header__burger');
+const mobileMenu = document.querySelector('.header__nav-list--mobile');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('header__burger--active');
+  mobileMenu.classList.toggle('is-open');
+});
+
+

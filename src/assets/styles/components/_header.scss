@@ -1,83 +1,160 @@
-// Bloque principal del header
-.header {
-  color: $color-light;
-  padding: 2.3rem 0rem;
-  border-bottom: 1px solid;
-  border-color: $gray-100;
-  background-color: $color-fondo;
+/* ==========================================================
+   Header
+   ========================================================== */
 
-  &__text {
+@layer base, components, overrides;
+
+/* -----------------------------------------
+   Base
+   ----------------------------------------- */
+
+@layer base {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    container-type: inline-size;
+    container-name: header;
     color: $color-light;
-    font-weight: 500;
-  }
+    padding: 2.3rem 0rem;
+    background-color: $color-fondo;
 
-  // Contenedor del navegador principal
-  &__nav {
-    // Estructura del nav
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
-
-  // Elemento del logo dentro del header  
-  &__logo {
-    // Contenedor del logo
-    text-decoration: none;
-    font-size: 1.6rem;
-
-    img {
-      // Imagen del logo
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-  }
 
-  // Lista del menú de navegación
-  &__nav-list {
-    // UL del menú
-    list-style-type: none;
-    display: flex;
-    gap: 3rem;
-    font-size: 1.2rem;
-  }
+    &__logo {
+      text-decoration: none;
+      font-size: 1.6rem;
 
-  // Item del menú de navegación
-  &__nav-item {
-    // LI del menú
-  }
-
-  // Enlaces de cada elemento del menú
-  &__nav-link {
-    // Link del menú
-    text-decoration: none;
-    color: $color-light;
-
-    &:hover {
-      // Hover de los enlaces
-      text-decoration: underline;
+      img {}
     }
-  }
 
-  // Estado activo del item de navegación
-  &__nav-item--active {
-    .header__nav-link {
-      // Estilo del enlace cuando el item está activo
+    &__text {
+      color: $color-light;
+      font-weight: 500;
+    }
+
+    &__nav-link {
+      text-decoration: none;
+      color: $color-light;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
-// Versión de index.html
+/* --------------------------------------------------------
+   Components
+   -------------------------------------------------------- */
+
+@layer components {
+
+  /* Botón hamburguesa */
+  .header__burger {
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+    z-index: 50;
+
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 2px;
+      transition: .3s ease;
+    }
+  }
+
+  /* Menú móvil desplegable */
+  .header__nav-list--mobile {
+    list-style: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 6rem 2rem;
+    background: $color-fondo;
+    transition: right .3s ease;
+    font-size: 1.4rem;
+    position: fixed;
+    z-index: 40;
+
+    &.is-open {
+      right: 0;
+    }
+  }
+}
+
+/* --------------------------------------------------------
+   Overrides
+   -------------------------------------------------------- */
+
+@layer overrides {
+
+  /* ANIMACIÓN: Hamburguesa → X */
+  .header__burger.header__burger--active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .header__burger.header__burger--active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__burger.header__burger--active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* --- Desktop (container query) --- */
+  @container header (min-width: 700px) {
+
+    /* Ocultar hamburguesa en desktop */
+    .header__burger {
+      display: none;
+    }
+
+    /* Convertir el menú en horizontal y alinear a la derecha */
+    .header__nav-list--mobile {
+      position: static;
+      height: auto;
+      flex-direction: row;
+      gap: 3rem;
+      padding: 0;
+      background: none;
+      width: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+/* ---------------------------------------
+   Estilo para index.html
+   --------------------------------------- */
 
 .page--home .header {
-  background: black;   // o el color especial
-  border-bottom: none;       // sin borde
-  position: absolute;        // si quieres que flote encima del póster
+  background: black;
+  border-bottom: none;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 10;
 
-  // Si la navbar debe ser clara sobre fondo de imagen
-  color: $color-light;
-
-  // Si los enlaces deben ser más visibles:
   .header__nav-link {
     color: $color-light;
 
@@ -86,4 +163,3 @@
     }
   }
 }
-
