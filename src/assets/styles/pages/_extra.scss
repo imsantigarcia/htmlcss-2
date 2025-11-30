@@ -12,10 +12,11 @@
     &__header {
       text-align: center;
       color: $color-dark;
-      margin: 3rem;
+      margin: 7lvh;
     }
     &__heading {
       font-weight: 500;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
     }
     &__description {}
 
@@ -25,8 +26,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      justify-content: space-between;
+      justify-content: space-evenly;
       width: 100%;
+      margin-bottom: 3rem;
     }
 
     &__gallery-item {
@@ -36,7 +38,7 @@
       border-radius: 7px;
       box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000001a;
       transition: transform .3s, box-shadow .3s;
-      width: 350px;
+      width: 400px;
       &:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 10px #00000026;
@@ -63,7 +65,7 @@
       margin-top: 0.5rem;
 
       &:hover {
-        background-color: aclarar($color-fondo, 25%);
+        background-color: color-mix(in oklch, $color-fondo 80%, white 20%);
       }
     }
 
@@ -108,7 +110,9 @@
 @container extra (min-width: 720px) {
   .extra {
     &__gallery {}
-    &__gallery-item {}
+    &__gallery-item {
+      width: 330px;
+    }
   }
 }
 
@@ -116,20 +120,108 @@
   .extra {
     &__gallery {}
     &__gallery-img {}
-    &__gallery-item {}
+    &__gallery-item {
+      width: 360px;
+    }
   }
 }
 
 @container extra (min-width: 1280px) {
   .extra {
     &__gallery {}
-    &__gallery-item {}
+    &__gallery-item {
+      width: 400px;
+    }
   }
 }
 
 @container extra (min-width: 1920px) {
   .extra {
     &__gallery {}
-    &__gallery-item {}
+    &__gallery-item {
+    }
+  }
+}
+
+/* ==========================================================
+   MODAL — Bootstrap compatible
+   ========================================================== */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 1.75rem auto;
+  pointer-events: none;
+  max-width: 900px;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: $blanco;
+  border-radius: 0.5rem;
+  outline: 0;
+  overflow: hidden;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Imagen del modal */
+#modalImage {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.btn-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.25rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "×";
+    font-size: 2rem;
+    line-height: 1;
+    color: $gray-700;
+  }
+
+  &:hover::before {
+    color: $gray-900;
   }
 }
