@@ -1,114 +1,210 @@
 /* ==========================================================
-   INDEX
-   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
+   Index
    ========================================================== */
 
-@layer components {
-  .home {
-    container-type: inline-size;
-    container-name: home;
+.home {
+  
+  /* -----------------------------------------
+     CONFIGURACIÓN CONTAINER QUERY
+     ----------------------------------------- */
+  container-type: inline-size;
+  container-name: home;
 
-    /* POSTER */
-    &__poster {}
-
-    /* HEADER */
-    &__header {}
-    &__heading {}
-    &__description {}
-
-    /* IMAGEN PRINCIPAL */
-    &__figure {}
-    &__img {}
-
-    /* INFORMACIÓN */
-    &__info {}
-    &__date {}
-    &__location {}
-
-    /* NAVEGACIÓN */
-    &__nav {}
-    &__link {}
+  /* -----------------------------------------
+     Estilo base
+     ----------------------------------------- */
+  
+  &__poster {
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-}
 
-/* ==========================================================
-   @SUPPORTS
-   ========================================================== */
+  &__header {
+    text-align: center;
+  }
 
-/* Soporte Grid */
-@supports (display: grid) {
-  .home {
-    &__poster {
-      /* grid-template-areas: ... */
-      /* grid-template-columns: ... */
-      /* grid-template-rows: ... */
+  &__heading {
+    font-family: var(--font-display, serif); 
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: var(--color-secondary, #2c3e50);
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  &__figure {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  &__info {
+    background-color: var(--color-primary, #c0392b);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  &__date,
+  &__location {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__cta {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  /* Botón */
+  &__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--color-secondary, #2c3e50);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      background-color: var(--color-primary, #c0392b);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
     }
   }
-}
 
-/* Fallback para navegadores que NO soportan Grid */
-@supports not (display: grid) {
-  .home {
+
+  /* -----------------------------------------
+     Grid, se activa cuando el contenedor 'home' > 900px
+     ----------------------------------------- */
+  
+  @container home (min-width: 900px) {
+      
     &__poster {
-      /* flex layout fallback */
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto auto 1fr auto;
+      gap: 0;
+      
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      max-width: none;
+      padding: 0;
+      margin: 4rem 0;
+      align-items: start;
+      min-height: 600px;
     }
-  }
-}
 
-/* ==========================================================
-   CONTAINER QUERIES y BREAKPOINTS DEL PROYECTO
-   ========================================================== */
+    /* Título */
+    &__header {
+      grid-column: 2 / 9;
+      grid-row: 1 / 3;
+      z-index: 10;
+      text-align: left;
+      align-self: end;
+      margin-bottom: 2rem;
+      pointer-events: none;
+    }
 
-@container home (min-width: 320px) {
-  .home {
-    &__poster {}
-    &__header {}
-    &__info {}
-    &__nav {}
-  }
-}
+    &__heading {
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      color: var(--color-secondary, #2c3e50);
+      mix-blend-mode: multiply;
+      line-height: 0.9;
+    }
 
-@container home (min-width: 480px) {
-  .home {
-    &__poster {}
-    &__header {}
-    &__info {}
-    &__nav {}
-  }
-}
+    &__description {
+      background: var(--color-bg, #f9f7f2);
+      display: inline-block;
+      padding: 0.5rem 1rem 0.5rem 0;
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      border-left: 4px solid var(--color-primary, #c0392b);
+      padding-left: 1rem;
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
+    }
 
-@container home (min-width: 720px) {
-  .home {
-    &__poster {}
-    &__header {}
-    &__info {}
-    &__nav {}
-  }
-}
+    /* Imagen */
+    &__figure {
+      grid-column: 6 / -1;
+      grid-row: 1 / 5;
+      z-index: 1;
+      height: 100%;
+      position: relative;
+    }
 
-@container home (min-width: 1024px) {
-  .home {
-    &__poster {}
-    &__header {}
-    &__info {}
-    &__nav {}
-  }
-}
+    &__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      filter: sepia(0.2) contrast(1.1);
+    }
 
-@container home (min-width: 1280px) {
-  .home {
-    &__poster {}
-    &__header {}
-    &__info {}
-    &__nav {}
-  }
-}
+    /* Info */
+    &__info {
+      grid-column: 1 / 2;
+      grid-row: 1 / 5;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      background: transparent;
+      color: var(--color-primary, #c0392b);
+      text-align: right;
+      padding: 0;
+      margin: 0;
+      justify-self: center;
+      align-self: center;
+      height: auto;
+      
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
 
-@container home (min-width: 1920px) {
-  .home {
-    &__poster {}
-    &__header {}
-    &__info {}
-    &__nav {}
+    &__date,
+    &__location {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    /* Llamada a la acción */
+    &__cta {
+      grid-column: 9 / 12;
+      grid-row: 4 / 5;
+      z-index: 20;
+      justify-self: end;
+      align-self: end;
+      margin-bottom: -2rem;
+    }
   }
 }

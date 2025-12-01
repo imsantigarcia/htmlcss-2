@@ -18,40 +18,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!--Title-->
-    <title>UOC Boilerplate</title>
+    <title>Tradikus: Jornadas de Cocina Tradicional</title>
     <!--Descripcón-->
-    <meta name="description" content="Por completar">
+    <meta name="description" content="Descubre la segunda edición de las Jornadas anuales de Cocina Tradicional de Vilaplana">
     <!--Autor-->
     <meta name="author" content="Santiago García">
   </head>
   <!--Body-->
   <body class="page--home">
+
     <!--Header-->
     <include src="./views/header.html"></include>
 
-    <!--main-->
+    <!--Main-->
     <main class="wrapper home">
 
-      <section class="home__poster">
+      <section class="home__poster animate__animated animate__fadeIn  ">
 
         <!--Cabecera-->
-        <div class="home__header">
-            <!--Título-->
-            <h1 class="home__heading">Inicio</h1>
-            <!--Descripción-->
-            <p class="home__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <header class="home__header">
+          <h1 class="home__heading">Tradikus: Jornadas de Cocina Tradicional</h1>
+          <p class="home__description">
+            Sabores, cultura y tradición reunidos en el Baix Camp.
+          </p>
+        </header>
 
         <!--Imagen principal-->
         <figure class="home__figure">
-          <!--Imagen-->
-          <img src="#" width="" height="" alt="" loading="lazy" class="home__img">
+          <img src="/src/assets/images/crema-catalana.png" alt="Imagen promocional" class="home__img" width="300" height="300">
         </figure>
 
-        <!--Información clave-->
+        <!--Información destacada-->
         <div class="home__info">
           <p class="home__date">5 – 7 de marzo de 2026</p>
           <p class="home__location">Ayuntamiento de Vilaplana</p>
+        </div>
+
+        <!--Llamada a la acción-->
+        <div class="home__cta">
+          <a href="/src/extra.html" class="btn btn-primary home__button">
+            Ver repositorio
+          </a>
         </div>
 
       </section>

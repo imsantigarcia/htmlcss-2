@@ -1,146 +1,157 @@
-/* ============================================
-   SPEAKERS
-   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
-   ============================================ */
+/* ==========================================================
+   Speakers
+   ========================================================== */
 
-/* ============================================
-   SPEAKERS (BASE: versión más pequeña)
-   ============================================ */
+  @layer components {
 
-@layer components {
+  .speakers {
 
-.speakers {
-  container-type: inline-size;
-  container-name: speakers;
-  padding: 5rem 1rem;
-  background: linear-gradient(
-    to bottom,
-    oklch(98% 0.01 60),
-    oklch(96% 0.015 40)
-  );
+    /* -----------------------------------------
+     CONFIGURACIÓN CONTAINER QUERY
+     ----------------------------------------- */
 
-  &__header {
-    text-align: center;
-    color: $color-dark;
-  }
+    container-type: inline-size;
+    container-name: speakers;
 
-  &__heading {
-    padding-bottom: 3rem;
-    font-size: 3rem;
-    font-weight: 400;
-  }
+    /* -----------------------------------------
+       Estilo base
+    ----------------------------------------- */
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: space-between;
-    width: 100%;
-  }
+    padding: 5rem 1rem;
+    background: linear-gradient(
+      to bottom,
+      oklch(98% 0.01 60),
+      oklch(96% 0.015 40)
+    );
 
-  
-  &__item {
-    flex: 1 1 100%;
-    max-width: none;
-    padding: 1.5rem;
-    border-radius: 7px;
-    list-style-type: none;
-    text-align: center;
-    box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000001a;
-    background-color: white;
-    transition: transform .3s, box-shadow .3s;
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px #00000026;
+    &__header {
+      text-align: center;
+      color: $color-dark;
     }
-  }
 
-  &__img { 
-    width: 100%;
-  height: auto;
-  max-width: 330px;
-  border-radius: 7px;
-  object-fit: cover;
-  margin-inline: auto;
-  }
+    &__heading {
+      padding-bottom: 3rem;
+      font-size: 3rem;
+      font-weight: 400;
+    }
 
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    margin-top: 1rem;
-  }
-
-  &__name {
-    font-weight: 400;
-    color: $color-primary;
-    font-size: 1.5rem;
-  }
-
-  &__description {
-    color: $color-dark;
-    font-size: 1.1rem;
-  }
-}
-}
-
-/* ============================================
-   CONTAINER QUERIES y BREAKPOINTS DEL PROYECTO
-   ============================================ */
-
-@container speakers (min-width: 320px) {
-  .speakers {
-    &__header {}
-    &__list {}
-    &__item {}
-  }
-}
-
-@container speakers (min-width: 480px) {
-  .speakers {
-    &__header {}
-    &__list {}
-    &__item {}
-  }
-}
-
-@container speakers (min-width: 720px) {
-  .speakers {
-    &__header {}
     &__list {
-
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: space-between;
+      width: 100%;
     }
-    &__item {
-      flex: 1 1 250px;
-      max-width: 400px;
-    }
-  }
-}
 
-@container speakers (min-width: 1024px) {
-  .speakers {
-    &__header {}
-    &__list {}
+    
     &__item {
-      flex: 1 1 calc(33.333% - 2rem);
+      flex: 1 1 100%;
       max-width: none;
+      padding: 1.5rem;
+      border-radius: 7px;
+      list-style-type: none;
+      text-align: center;
+      box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000001a;
+      background-color: white;
+      transition: transform .3s, box-shadow .3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px #00000026;
+      }
+    }
+
+    &__img { 
+      width: 100%;
+    height: auto;
+    max-width: 330px;
+    border-radius: 7px;
+    object-fit: cover;
+    margin-inline: auto;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-top: 1rem;
+    }
+
+    &__name {
+      font-weight: 400;
+      color: $color-primary;
+      font-size: 1.5rem;
+    }
+
+    &__description {
+      color: $color-dark;
+      font-size: 1.1rem;
     }
   }
-}
-
-@container speakers (min-width: 1280px) {
-  .speakers {
-    &__header {}
-    &__list {}
-    &__item {}
   }
-}
 
-@container speakers (min-width: 1920px) {
-  .speakers {
-    &__header {}
-    &__list {}
-    &__item {}
+/* ==========================================================
+   Container queries
+   ========================================================== */
+
+  /* 320px - Móvil pequeño */
+  @container speakers (min-width: 320px) {
+    .speakers {
+      &__header {}
+      &__list {}
+      &__item {}
+    }
   }
-}
+
+  /* 320px - Móvil grande */
+  @container speakers (min-width: 480px) {
+    .speakers {
+      &__header {}
+      &__list {}
+      &__item {}
+    }
+  }
+
+  /* 720px – tablet */
+  @container speakers (min-width: 720px) {
+    .speakers {
+      &__header {}
+      &__list {
+
+      }
+      &__item {
+        flex: 1 1 250px;
+        max-width: 400px;
+      }
+    }
+  }
+
+  /* 1024px – desktop medio */
+  @container speakers (min-width: 1024px) {
+    .speakers {
+      &__header {}
+      &__list {}
+      &__item {
+        flex: 1 1 calc(33.333% - 2rem);
+        max-width: none;
+      }
+    }
+  }
+
+  /* 1280px – desktop grande */
+  @container speakers (min-width: 1280px) {
+    .speakers {
+      &__header {}
+      &__list {}
+      &__item {}
+    }
+  }
+
+  /* 1920px – pantallas muy grandes */
+  @container speakers (min-width: 1920px) {
+    .speakers {
+      &__header {}
+      &__list {}
+      &__item {}
+    }
+  }

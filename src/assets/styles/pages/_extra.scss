@@ -1,14 +1,22 @@
 /* ==========================================================
-   EXTRA
-   Breakpoints: 320 / 480 / 720 / 1024 / 1280 / 1920
+   Extra
    ========================================================== */
 
 @layer components {
   .extra {
+
+    /* -----------------------------------------
+     CONFIGURACIÓN CONTAINER QUERY
+     ----------------------------------------- */
+
     container-type: inline-size;
     container-name: extra;
 
-    /* HEADER */
+    /* -----------------------------------------
+       Estilo base
+    ----------------------------------------- */
+
+    /* Header */
     &__header {
       text-align: center;
       color: $color-dark;
@@ -20,7 +28,7 @@
     }
     &__description {}
 
-    /* GALERÍA */
+    /* Galería */
     &__gallery {
       text-align: center;
       display: flex;
@@ -90,9 +98,10 @@
 }
 
 /* ==========================================================
-   CONTAINER QUERIES y BREAKPOINTS DEL PROYECTO
+   Container queries
    ========================================================== */
 
+/* 320px - Móvil pequeño */
 @container extra (min-width: 320px) {
   .extra {
     &__gallery {}
@@ -100,6 +109,7 @@
   }
 }
 
+/* 320px - Móvil grande */
 @container extra (min-width: 480px) {
   .extra {
     &__gallery {}
@@ -107,6 +117,7 @@
   }
 }
 
+/* 720px – tablet */
 @container extra (min-width: 720px) {
   .extra {
     &__gallery {}
@@ -116,6 +127,7 @@
   }
 }
 
+/* 1024px – desktop medio */
 @container extra (min-width: 1024px) {
   .extra {
     &__gallery {}
@@ -126,6 +138,7 @@
   }
 }
 
+/* 1280px – desktop grande */
 @container extra (min-width: 1280px) {
   .extra {
     &__gallery {}
@@ -135,6 +148,8 @@
   }
 }
 
+
+/* 1920px – pantallas muy grandes */
 @container extra (min-width: 1920px) {
   .extra {
     &__gallery {}
@@ -144,7 +159,7 @@
 }
 
 /* ==========================================================
-   MODAL — Bootstrap compatible
+   Modal
    ========================================================== */
 
 .modal {

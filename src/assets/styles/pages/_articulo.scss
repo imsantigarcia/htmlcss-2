@@ -5,12 +5,17 @@
 @layer components {
 
   .article {
+
+    /* -----------------------------------------
+     CONFIGURACIÓN CONTAINER QUERY
+     ----------------------------------------- */
+
     container-type: inline-size;
     container-name: article;
     padding-bottom: 2rem;
 
     /* -----------------------------------------
-       Header
+       Estilo base
     ----------------------------------------- */
     &__heading {
       position: relative;
