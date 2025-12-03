@@ -30,3 +30,27 @@ burger.addEventListener('click', () => {
 });
 
 
+// Galería
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryModal = document.getElementById('galleryModal');
+  
+  if (galleryModal) {
+    galleryModal.addEventListener('show.bs.modal', event => {
+      // 1. Elemento que disparó el modal (la imagen pequeña)
+      const triggerImage = event.relatedTarget;
+      
+      // 2. Extraemos la info de la imagen pequeña
+      const src = triggerImage.getAttribute('src');
+      const alt = triggerImage.getAttribute('alt');
+      
+      // 3. Buscamos la imagen dentro del modal
+      const modalImage = galleryModal.querySelector('#modal-image');
+      
+      // 4. Actualizamos la imagen del modal
+      modalImage.src = src;
+      modalImage.alt = alt;
+    });
+  }
+});

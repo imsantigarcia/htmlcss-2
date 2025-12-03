@@ -4,7 +4,6 @@
 
 @layer components {
   .extra {
-
     /* -----------------------------------------
      CONFIGURACIÓN CONTAINER QUERY
      ----------------------------------------- */
@@ -22,11 +21,11 @@
       color: $color-dark;
       margin: 7lvh;
     }
+
     &__heading {
       font-weight: 500;
       font-size: clamp(1.8rem, 4vw, 2.6rem);
     }
-    &__description {}
 
     /* Galería */
     &__gallery {
@@ -47,6 +46,7 @@
       box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000001a;
       transition: transform .3s, box-shadow .3s;
       width: 400px;
+
       &:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 10px #00000026;
@@ -68,12 +68,12 @@
       background-color: $color-fondo;
       text-decoration: none;
       color: $color-light;
-      padding: 0.5rem 0rem;
+      padding: 0.5rem 0;
       border-radius: 7px;
       margin-top: 0.5rem;
 
       &:hover {
-        background-color: color-mix(in oklch, $color-fondo 80%, white 20%);
+        background-color: color-mix(in oklch, $color-fondo 80%, $color-light 20%);
       }
     }
 
@@ -89,6 +89,7 @@
       border-radius: 7px;
       height: auto;
     }
+
     &__gallery-caption {
       display: flex;
       flex-direction: column;
@@ -101,26 +102,9 @@
    Container queries
    ========================================================== */
 
-/* 320px - Móvil pequeño */
-@container extra (min-width: 320px) {
-  .extra {
-    &__gallery {}
-    &__gallery-item {}
-  }
-}
-
-/* 320px - Móvil grande */
-@container extra (min-width: 480px) {
-  .extra {
-    &__gallery {}
-    &__gallery-item {}
-  }
-}
-
 /* 720px – tablet */
 @container extra (min-width: 720px) {
   .extra {
-    &__gallery {}
     &__gallery-item {
       width: 330px;
     }
@@ -130,8 +114,6 @@
 /* 1024px – desktop medio */
 @container extra (min-width: 1024px) {
   .extra {
-    &__gallery {}
-    &__gallery-img {}
     &__gallery-item {
       width: 360px;
     }
@@ -141,19 +123,8 @@
 /* 1280px – desktop grande */
 @container extra (min-width: 1280px) {
   .extra {
-    &__gallery {}
     &__gallery-item {
       width: 400px;
-    }
-  }
-}
-
-
-/* 1920px – pantallas muy grandes */
-@container extra (min-width: 1920px) {
-  .extra {
-    &__gallery {}
-    &__gallery-item {
     }
   }
 }
@@ -210,11 +181,11 @@
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgb(0 0 0 / 60%);
 }
 
 /* Imagen del modal */
-#modalImage {
+[id="modal-image"] {
   width: 100%;
   height: auto;
   max-height: 85vh;

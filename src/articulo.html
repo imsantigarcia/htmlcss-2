@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <!--Animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <!--CSS de AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!--Tipografía-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!--Title-->
-    <title>Artículo: La cocina catalana</title>
+    <title>Artículo - La cocina catalana</title>
     <!--Descripcón-->
     <meta name="description" content="Tradición, proximidad y territorio: así es la cocina catalana">
     <!--Autor-->
@@ -34,10 +36,10 @@
 
         <!--Artículo-->
 
-        <article class="article animate__animated animate__fadeIn">
+        <article class="article">
 
             <!--Header-->
-            <div class="article__heading">
+            <div class="article__heading" data-aos="fade-up">
                 <!--H1-->
                 <h1 class="article__title">La cocina catalana</h1>
                 <!--Autor-->
@@ -45,7 +47,7 @@
             </div>
 
             <!--Texto destacado-->
-            <section class="article__featured">
+            <section class="article__featured" data-aos="fade-up">
 
                 <!--Texto grande-->
                 <p class="article__featured-text">La cocina catalana combina tradición, productos de proximidad y una manera especial de entender el territorio.</p>
@@ -56,7 +58,7 @@
             </section>
 
             <!--Párrafos-->
-            <div class="article__content">
+            <div class="article__content" data-aos="fade-up">
                 
                 <!--Título 2-->
                 <h2 class="article__h2">Orígenes de una tradición culinaria</h2>
@@ -76,12 +78,12 @@
 
             <!--Imagen 1-->
 
-            <figure class="article__figure">
+            <figure class="article__figure" data-aos="fade-up">
                 <img class="article__img" height="" width="" src="/src/assets/images/pan-tomate.png" alt="Fotografía de una llesca de pan con tomate, aceite y sal" loading="lazy">
                 <figcaption class="article__caption">El popular pa amb tomàquet, un símbolo sencillo pero imprescindible de la cocina catalana.</figcaption>
             </figure>
 
-            <div class="article__content">
+            <div class="article__content" data-aos="fade-up">
 
                 <!--Título 2-->
                 <h2 class="article__h2">Productos locales y técnicas que perduran</h2>
@@ -105,13 +107,13 @@
 
             <!--Imagen 2-->
 
-            <figure class="article__figure">
+            <figure class="article__figure" data-aos="fade-up">
                 <img class="article__img" height="" width="" src="/src/assets/images/crema-catalana.png" alt="Fotografía de una crema catalana sobre una mesa de madera" loading="lazy">
                 <figcaption class="article__caption">La tradicional crema catalana, uno de los postres más antiguos documentados en Europa.</figcaption>
             </figure>
 
             <!--Párrafos-->
-            <div class="article__content">
+            <div class="article__content" data-aos="fade-up">
                 
                 <!--Título 2-->
                 <h2 class="article__h2">La cocina catalana hoy</h2>
@@ -126,6 +128,12 @@
 
     <!--Footer-->
     <include src="./views/footer.html"></include>
+
+    <!-- JS de AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 
     <!--Scripts-->
     <script type="module" src="./assets/scripts/main.js"></script>

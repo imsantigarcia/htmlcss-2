@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <!--Animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <!--CSS de AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!--Tipografía-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +32,12 @@
     <include src="./views/header.html"></include>
 
     <!--main-->
-    <main class="wrapper animate__animated animate__fadeIn">
+    <main class="wrapper" data-aos="fade-in">
 
         <section class="extra">
 
             <!--Cabecera-->
-            <div class="extra__header">
+            <div class="extra__header" data-aos="fade-up">
                 <!--Título-->
                 <h1 class="extra__heading">Repositorio</h1>
                 <!--Descripción-->
@@ -46,7 +48,7 @@
             <ul class="extra__gallery">
 
                 <!--Fotografía 1: Sushi tradicional japonés-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/sushi.png" alt="Plato de sushi tradicional japonés" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -61,7 +63,7 @@
                 </li>
 
                 <!--Fotografía 2: Paella valenciana-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/paella.png" alt="Una paella valenciana" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -76,7 +78,7 @@
                 </li>
 
                 <!--Fotografía 3: Pizza napolitana-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/pizza.png" alt="Una pizza napolitana" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -91,7 +93,7 @@
                 </li>
 
                 <!--Fotografía 4: Tacos mexicanos-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/tacos.png" alt="Plato de Tacos mexicanos" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -106,7 +108,7 @@
                 </li>
 
                 <!--Fotografía 5: Pad Thai tailandés-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/pad.png" alt="Plato de Pad Thai" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -121,7 +123,7 @@
                 </li>
 
                 <!--Fotografía 6: Cevice peruano-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/ceviche.png" alt="Plato de Ceviche peruano" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -136,7 +138,7 @@
                 </li>
 
                 <!--Fotografía 7: Croissant francés-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/croasan.png" alt="Plato de Croissant" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -151,7 +153,7 @@
                 </li>
 
                 <!--Fotografía 8: Falafel del Medio Oriente-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/falafel.png" alt="Plato de Falafel oriental" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -166,7 +168,7 @@
                 </li>
 
                 <!--Fotografía 9: Curry indio-->
-                <li class="extra__gallery-item">
+                <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
                         <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/curry.png" alt="Plato de curry indio" data-bs-toggle="modal" data-bs-target="#galleryModal">
                         <figcaption class="extra__gallery-caption">
@@ -199,8 +201,8 @@
         <!-- Contenido del modal (imagen grande) -->
         <div class="modal-body p-0">
             <img 
-            id="modalImage" 
-            class="w-100"
+            id="modal-image" 
+            class="w-100 modal__image"
             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
             alt=""
             >
@@ -212,6 +214,11 @@
 
     <!--Footer-->
     <include src="./views/footer.html"></include>
+    <!-- JS de AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
     <!--Scripts-->
     <script type="module" src="./assets/scripts/main.js"></script>
     <!--Bootstrap-->

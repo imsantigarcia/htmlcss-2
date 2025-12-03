@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--CSS de AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!--Title-->
     <title>Tradikus: Jornadas de Cocina Tradicional</title>
     <!--Descripcón-->
@@ -33,7 +35,7 @@
     <!--Main-->
     <main class="wrapper home">
 
-      <section class="home__poster animate__animated animate__fadeIn  ">
+      <section class="home__poster animate__animated animate__fadeIn" data-aos="fade-up">
 
         <!--Cabecera-->
         <header class="home__header">
@@ -68,7 +70,14 @@
     <!--Footer-->
     <include src="./views/footer.html"></include>
 
-    <!--Scripts-->
+    <!-- JS de AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+    <!--Mi JS-->
     <script type="module" src="./assets/scripts/main.js"></script>
+
   </body>
 </html>

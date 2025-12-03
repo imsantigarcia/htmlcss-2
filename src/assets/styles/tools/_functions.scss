@@ -1,6 +1,3 @@
-// Aclarar el color
-
 @function aclarar($color, $cantidad: 20%) {
-  // Mezcla el color original con blanco en el espacio oklch
-  @return color-mix(in oklch, $color, white $cantidad);
+  @return color-mix(in oklch, $color, #fff $cantidad);
 }

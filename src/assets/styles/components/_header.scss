@@ -16,7 +16,7 @@
     container-type: inline-size;
     container-name: header;
     color: $color-light;
-    padding: 2.3rem 0rem;
+    padding: 2.3rem 0;
     background-color: $color-fondo;
 
     &__nav {
@@ -28,8 +28,6 @@
     &__logo {
       text-decoration: none;
       font-size: 1.6rem;
-
-      img {}
     }
 
     &__text {
@@ -53,7 +51,6 @@
    -------------------------------------------------------- */
 
 @layer components {
-
   /* Botón hamburguesa */
   .header__burger {
     width: 2.5rem;
@@ -82,7 +79,6 @@
   .header__nav-list--mobile {
     list-style: none;
     display: flex;
-    position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
@@ -107,7 +103,6 @@
    -------------------------------------------------------- */
 
 @layer overrides {
-
   /* ANIMACIÓN: Hamburguesa → X */
   .header__burger.header__burger--active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -123,7 +118,6 @@
 
   /* --- Desktop (container query) --- */
   @container header (min-width: 700px) {
-
     /* Ocultar hamburguesa en desktop */
     .header__burger {
       display: none;
@@ -148,7 +142,7 @@
    --------------------------------------- */
 
 .page--home .header {
-  background: black;
+  background: $gray-900;
   border-bottom: none;
   position: sticky;
   top: 0;

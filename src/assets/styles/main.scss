@@ -14,7 +14,6 @@
 @import "settings/icons";
 
 // 2. Tools
-@import "tools/mixins";
 @import "tools/functions";
 
 // 4. Elements
@@ -22,15 +21,12 @@
 
 // 5. Objects
 @import "objects/layout";
-@import "objects/grid";
 
 // 6. Components (BEM)
 @import "components/header";
 @import "components/footer";
-@import "components/card";
 
 // 7. Utilities
-@import "utilities/helpers";
 
 /**
  * Page layouts

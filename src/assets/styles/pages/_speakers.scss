@@ -3,9 +3,7 @@
    ========================================================== */
 
   @layer components {
-
   .speakers {
-
     /* -----------------------------------------
      CONFIGURACIÓN CONTAINER QUERY
      ----------------------------------------- */
@@ -20,8 +18,8 @@
     padding: 5rem 1rem;
     background: linear-gradient(
       to bottom,
-      oklch(98% 0.01 60),
-      oklch(96% 0.015 40)
+      oklch(98% 0.01 60deg),
+      oklch(96% 0.015 40deg)
     );
 
     &__header {
@@ -52,7 +50,7 @@
       list-style-type: none;
       text-align: center;
       box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000001a;
-      background-color: white;
+      background-color: $color-light;
       transition: transform .3s, box-shadow .3s;
 
       &:hover {
@@ -94,31 +92,9 @@
    Container queries
    ========================================================== */
 
-  /* 320px - Móvil pequeño */
-  @container speakers (min-width: 320px) {
-    .speakers {
-      &__header {}
-      &__list {}
-      &__item {}
-    }
-  }
-
-  /* 320px - Móvil grande */
-  @container speakers (min-width: 480px) {
-    .speakers {
-      &__header {}
-      &__list {}
-      &__item {}
-    }
-  }
-
   /* 720px – tablet */
   @container speakers (min-width: 720px) {
     .speakers {
-      &__header {}
-      &__list {
-
-      }
       &__item {
         flex: 1 1 250px;
         max-width: 400px;
@@ -129,8 +105,6 @@
   /* 1024px – desktop medio */
   @container speakers (min-width: 1024px) {
     .speakers {
-      &__header {}
-      &__list {}
       &__item {
         flex: 1 1 calc(33.333% - 2rem);
         max-width: none;
@@ -138,20 +112,3 @@
     }
   }
 
-  /* 1280px – desktop grande */
-  @container speakers (min-width: 1280px) {
-    .speakers {
-      &__header {}
-      &__list {}
-      &__item {}
-    }
-  }
-
-  /* 1920px – pantallas muy grandes */
-  @container speakers (min-width: 1920px) {
-    .speakers {
-      &__header {}
-      &__list {}
-      &__item {}
-    }
-  }

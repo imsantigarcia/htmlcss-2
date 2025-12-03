@@ -34,8 +34,6 @@
     &__logo {
       text-decoration: none;
       font-size: 1.6rem;
-
-      img {}
     }
 
     /* Menú */
@@ -47,8 +45,6 @@
       padding: 0;
       margin: 0;
     }
-
-    &__nav-item {}
 
     &__nav-link {
       text-decoration: none;
@@ -101,11 +97,9 @@
    ----------------------------------- */
 
 @layer overrides {
-
   @container footer (min-width: 700px) {
-
     .footer__container {
-      flex-direction: row;          /* DESKTOP → fila */
+      flex-direction: row;          
       justify-content: space-between;
       align-items: center;
       text-align: left;
@@ -113,7 +107,7 @@
     }
 
     .footer__nav-list {
-      flex-direction: row;          /* menú en fila */
+      flex-direction: row;          
       gap: 3rem;
     }
   }
