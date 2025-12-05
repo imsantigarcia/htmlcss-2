@@ -31,8 +31,18 @@
     <!--Header-->
     <include src="./views/header.html"></include>
 
-    <!--main-->
+    <!--Main-->
     <main class="wrapper" data-aos="fade-in">
+
+        <!--Migas de pan-->
+        <div class="extra__breadcrumbs">
+            <nav aria-label="Ruta de navegación">
+                <ol class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Inicio</a></li>
+                <li class="breadcrumbs__item breadcrumbs__item--active" aria-current="page">Repositorio</li>
+                </ol>
+            </nav>
+        </div>
 
         <section class="extra">
 
@@ -50,7 +60,7 @@
                 <!--Fotografía 1: Sushi tradicional japonés-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/sushi.png" alt="Plato de sushi tradicional japonés" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/sushi.png" alt="Plato de sushi tradicional japonés" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Sushi tradicional japonés</h2>
@@ -65,7 +75,7 @@
                 <!--Fotografía 2: Paella valenciana-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/paella.png" alt="Una paella valenciana" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/paella.png" alt="Una paella valenciana" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Paella valenciana</h2>
@@ -80,7 +90,7 @@
                 <!--Fotografía 3: Pizza napolitana-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/pizza.png" alt="Una pizza napolitana" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/pizza.png" alt="Una pizza napolitana" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Pizza napolitana</h2>
@@ -95,7 +105,7 @@
                 <!--Fotografía 4: Tacos mexicanos-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/tacos.png" alt="Plato de Tacos mexicanos" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/tacos.png" alt="Plato de Tacos mexicanos" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Tacos mexicanos</h2>
@@ -110,7 +120,7 @@
                 <!--Fotografía 5: Pad Thai tailandés-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/pad.png" alt="Plato de Pad Thai" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/pad.png" alt="Plato de Pad Thai" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Pad Thai tailandés</h2>
@@ -125,7 +135,7 @@
                 <!--Fotografía 6: Cevice peruano-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/ceviche.png" alt="Plato de Ceviche peruano" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/ceviche.png" alt="Plato de Ceviche peruano" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Ceviche peruano</h2>
@@ -140,7 +150,7 @@
                 <!--Fotografía 7: Croissant francés-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/croasan.png" alt="Plato de Croissant" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/croasan.png" alt="Plato de Croissant" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Croissant francés</h2>
@@ -155,7 +165,7 @@
                 <!--Fotografía 8: Falafel del Medio Oriente-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/falafel.png" alt="Plato de Falafel oriental" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/falafel.png" alt="Plato de Falafel oriental" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Falafel del Medio Oriente</h2>
@@ -170,7 +180,7 @@
                 <!--Fotografía 9: Curry indio-->
                 <li class="extra__gallery-item" data-aos="fade-up">
                     <figure class="extra__gallery-figure">
-                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/curry.png" alt="Plato de curry indio" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <img class="extra__gallery-img" width="" height="" loading="lazy" src="/src/assets/images/curry.png" alt="Plato de curry indio" data-modal-target>
                         <figcaption class="extra__gallery-caption">
                             <!--Subtítulo-->
                             <h2 class="extra__gallery-subtitle">Curry indio</h2>
@@ -182,34 +192,84 @@
                     </figure>
                 </li>
             </ul>
+
+            <!-- Acordeón de Bootstrap !-->
+            <div class="extra__accordion accordion" id="extraAccordion">
+
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Qué criterios se siguen para seleccionar las recetas?
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#extraAccordion">
+                    <div class="accordion-body">
+                        Las recetas son aportadas por chefs invitados y seleccionadas según tradición, innovación y relevancia gastronómica.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Qué países forman parte del repositorio este año?
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#extraAccordion">
+                    <div class="accordion-body">
+                        Este año destacan recetas de Japón, Italia, México, Perú, Francia y Tailandia, entre otros.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Puedo enviar mis propias recetas para futuras jornadas?
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#extraAccordion">
+                    <div class="accordion-body">
+                        Sí, el comité acepta propuestas a través de la página de contacto. Las recetas seleccionadas pueden aparecer en próximas ediciones.
+                    </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <!-- Modal de la galería -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-white position-relative">
 
-        <!-- Botón de cerrar -->
-        <button 
-            type="button" 
-            class="btn-close position-absolute end-0 m-3" 
-            data-bs-dismiss="modal" 
-            aria-label="Close"
-            style="z-index: 10;">
-        </button>
+   <!-- Modal de la galería -->
+    <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+        <div class="gallery-modal__dialog">
+            <div class="gallery-modal__content">
 
-        <!-- Contenido del modal (imagen grande) -->
-        <div class="modal-body p-0">
-            <img 
-            id="modal-image" 
-            class="w-100 modal__image"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
-            alt=""
-            >
+            <!-- Botón de cerrar -->
+            <button 
+                type="button" 
+                class="gallery-modal__close"
+                aria-label="Cerrar">
+            </button>
+
+            <!-- Contenido del modal (imagen grande) -->
+            <div class="gallery-modal__body">
+                <img 
+                class="gallery-modal__image"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
+                alt=""
+                >
+            </div>
+
+            </div>
         </div>
-
-        </div>
-    </div>
     </div>
 
     <!--Footer-->
@@ -221,7 +281,5 @@
     </script>
     <!--Scripts-->
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

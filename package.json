@@ -9,7 +9,7 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "test": "echo 'Everything is working as expected \nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
     "lint:css": "stylelint \"src/**/*.scss\" --custom-syntax postcss-scss --no-cache"
   },
   "targets": {
@@ -52,6 +52,7 @@
     "stylelint-scss": "^6.12.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.1"
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "bootstrap": "^5.3.8"
   }
 }

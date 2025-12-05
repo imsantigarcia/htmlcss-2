@@ -4,15 +4,15 @@ module.exports = {
     "stylelint-config-standard-scss"
   ],
   
-  // Forzamos la sintaxis globalmente
+  // FORZAR LA SINTAXIS
   customSyntax: "postcss-scss",
 
   rules: {
-    // REGLAS PRINCIPALES (Redundantes pero seguras)
+    // REGLAS PRINCIPALES
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
 
-    // TUS REGLAS PERSONALIZADAS
+    // REGLAS PERSONALIZADAS
     "max-nesting-depth": 3,
     "color-named": "never",
     "selector-max-id": 0,
