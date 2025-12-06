@@ -10,14 +10,6 @@
  * Write any other JavaScript below
  */
 
-// Modal dinámico para la galería
-document.querySelectorAll('.extra__gallery-img').forEach(img => {
-  img.addEventListener('click', () => {
-    const modalImage = document.getElementById('modalImage');
-    modalImage.src = img.src;
-  });
-});
-
 
 // Menú móvil
 
@@ -29,7 +21,11 @@ burger.addEventListener('click', () => {
   mobileMenu.classList.toggle('is-open');
 });
 
+// Bootstrap
+
 import * as bootstrap from "bootstrap";
+
+// Modal
 
 document.querySelectorAll("[data-modal-target]").forEach(img => {
   img.addEventListener("click", () => {
