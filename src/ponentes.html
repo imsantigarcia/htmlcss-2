@@ -31,18 +31,18 @@
     <!--Header-->
     <include src="./views/header.html"></include>
 
-    <!--main-->
+    <!--Main-->
     <main class="speakers animate__animated animate__fadeIn">
 
         <!--Migas de pan-->
-        <div class="extra__breadcrumbs">
-            <nav aria-label="Ruta de navegación">
-                <ol class="breadcrumbs">
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Inicio</a></li>
-                <li class="breadcrumbs__item breadcrumbs__item--active" aria-current="page">Ponentes</li>
-                </ol>
-            </nav>
-        </div>
+        <nav class="extra__breadcrumbs" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb extra__breadcrumbs-list">
+                <li class="breadcrumb-item">
+                <a href="#">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Ponentes</li>
+            </ol>
+        </nav>
 
         <section>
 

@@ -29,20 +29,18 @@ burger.addEventListener('click', () => {
   mobileMenu.classList.toggle('is-open');
 });
 
+import * as bootstrap from "bootstrap";
 
-// Abrir modal
 document.querySelectorAll("[data-modal-target]").forEach(img => {
   img.addEventListener("click", () => {
-    const modal = document.getElementById("galleryModal");
-    const modalImg = modal.querySelector(".gallery-modal__image");
+    const modalEl = document.getElementById("galleryModal");
+    const modal = new bootstrap.Modal(modalEl);
+    const modalImg = document.getElementById("modalImage");
+
     modalImg.src = img.src;
-    modal.classList.add("gallery-modal--show");
+    modal.show();
   });
 });
 
-// Cerrar modal
-document.querySelector(".gallery-modal__close").addEventListener("click", () => {
-  document.getElementById("galleryModal").classList.remove("gallery-modal--show");
-});
 
 

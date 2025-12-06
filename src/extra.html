@@ -35,14 +35,14 @@
     <main class="wrapper" data-aos="fade-in">
 
         <!--Migas de pan-->
-        <div class="extra__breadcrumbs">
-            <nav aria-label="Ruta de navegación">
-                <ol class="breadcrumbs">
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Inicio</a></li>
-                <li class="breadcrumbs__item breadcrumbs__item--active" aria-current="page">Repositorio</li>
-                </ol>
-            </nav>
-        </div>
+        <nav class="extra__breadcrumbs" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb extra__breadcrumbs-list">
+                <li class="breadcrumb-item">
+                <a href="#">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Repositorio</li>
+            </ol>
+        </nav>
 
         <section class="extra">
 
@@ -192,85 +192,57 @@
                     </figure>
                 </li>
             </ul>
+        </section>
 
-            <!-- Acordeón de Bootstrap !-->
-            <div class="extra__accordion accordion" id="extraAccordion">
+        <section class="extra">
 
-                <!-- Pregunta 1 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        ¿Qué criterios se siguen para seleccionar las recetas?
-                    </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#extraAccordion">
-                    <div class="accordion-body">
-                        Las recetas son aportadas por chefs invitados y seleccionadas según tradición, innovación y relevancia gastronómica.
-                    </div>
-                    </div>
-                </div>
+            <!--Cabecera de la sección-->
 
-                <!-- Pregunta 2 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿Qué países forman parte del repositorio este año?
-                    </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#extraAccordion">
-                    <div class="accordion-body">
-                        Este año destacan recetas de Japón, Italia, México, Perú, Francia y Tailandia, entre otros.
-                    </div>
-                    </div>
-                </div>
-
-                <!-- Pregunta 3 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ¿Puedo enviar mis propias recetas para futuras jornadas?
-                    </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#extraAccordion">
-                    <div class="accordion-body">
-                        Sí, el comité acepta propuestas a través de la página de contacto. Las recetas seleccionadas pueden aparecer en próximas ediciones.
-                    </div>
-                    </div>
-                </div>
+            <div class="extra__header" data-aos="fade-up">
+                <!--Título-->
+                <h2 class="extra__heading">Preguntas frecuentes</h2>
+                <!--Descripción-->
+                <p class="extra__description">Descubre las recetas que este año se presentarán en la jornada</p>
             </div>
+
+            <!--Acordeón de Bootstrap-->
+            <div class="extra__accordion accordion accordion-flush" id="accordionFlushExample">
+                <!--Pregunta 1-->
+                <div class="extra__accordion-item accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ¿Qué son las Jornadas Tradikus?
+                    </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Las Jornadas Tradikus son un encuentro anual dedicado a la difusión y celebración de la cocina tradicional de distintos países. Durante tres días, chefs, investigadores gastronómicos y amantes de la gastronomía se reúnen para compartir recetas, técnicas culinarias, historias y cultura. El objetivo principal es preservar las tradiciones culinarias y mostrarlas al público en un formato accesible, dinámico y participativo.</div>
+                    </div>
+                </div>
+                <!--Pregunta 2-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Cómo se seleccionan las recetas del repositorio?
+                    </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Las recetas que aparecen en este repositorio han sido elegidas por los ponentes y colaboradores de las Jornadas Tradikus. Cada plato representa la esencia gastronómica de una región y se selecciona en función de su valor cultural, su historia y su importancia dentro de la cocina tradicional. Antes del evento, cada chef propone varias elaboraciones y un comité gastronómico decide cuáles formarán parte del catálogo oficial de esta edición.</div>
+                    </div>
+                </div>
+                <!--Pregunta 3-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        ¿Se preparan estas recetas durante las jornadas?
+                    </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Sí. Todas las recetas que ves aquí forman parte de las demostraciones y talleres que se realizan durante las jornadas.Algunas se cocinan en directo en el escenario principal, mientras que otras se desarrollan en pequeños grupos para que los asistentes puedan aprender la técnica directamente de los expertos. El repositorio sirve como guía previa para que los participantes conozcan los platos antes de asistir a la actividad correspondiente.</div>
+                    </div>
+                </div>
+                </div>
         </section>
     </main>
-
-   <!-- Modal de la galería -->
-    <div class="gallery-modal" id="galleryModal" aria-hidden="true">
-        <div class="gallery-modal__dialog">
-            <div class="gallery-modal__content">
-
-            <!-- Botón de cerrar -->
-            <button 
-                type="button" 
-                class="gallery-modal__close"
-                aria-label="Cerrar">
-            </button>
-
-            <!-- Contenido del modal (imagen grande) -->
-            <div class="gallery-modal__body">
-                <img 
-                class="gallery-modal__image"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
-                alt=""
-                >
-            </div>
-
-            </div>
-        </div>
-    </div>
 
     <!--Footer-->
     <include src="./views/footer.html"></include>
@@ -281,5 +253,29 @@
     </script>
     <!--Scripts-->
     <script type="module" src="./assets/scripts/main.js"></script>
+
+    <!-- Modal de la galería -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button 
+                    type="button" 
+                    class="btn-close" 
+                    data-bs-dismiss="modal" 
+                    aria-label="Cerrar">
+                    </button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <img 
+                    id="modalImage"
+                    class="img-fluid"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    alt="Imagen ampliada">
+                </div>
+            </div>
+        </div>
+    </div>
   </body>
 </html>

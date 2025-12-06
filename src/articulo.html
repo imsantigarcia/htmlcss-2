@@ -35,14 +35,14 @@
     <main>
 
         <!--Migas de pan-->
-        <div class="extra__breadcrumbs">
-            <nav aria-label="Ruta de navegación">
-                <ol class="breadcrumbs">
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Inicio</a></li>
-                <li class="breadcrumbs__item breadcrumbs__item--active" aria-current="page">Artículo</li>
-                </ol>
-            </nav>
-        </div>
+        <nav class="extra__breadcrumbs" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb extra__breadcrumbs-list">
+                <li class="breadcrumb-item">
+                <a href="#">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Artículo</li>
+            </ol>
+        </nav>
 
         <!--Artículo-->
 
@@ -51,7 +51,12 @@
             <!--Header-->
             <div class="article__heading" data-aos="fade-up">
                 <!--H1-->
-                <h1 class="article__title">La cocina catalana</h1>
+                <h1 class="article__title">
+                    <!--Badge-->
+                    <span class="article__badge badge bg-secondary">Popular</span>
+                    <!--Título-->
+                    La cocina catalana
+                </h1>
                 <!--Autor-->
                 <p class="article__author">Un artículo de Santiago García</p>
             </div>

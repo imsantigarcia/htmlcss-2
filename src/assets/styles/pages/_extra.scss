@@ -4,6 +4,7 @@
 
 @layer components {
   .extra {
+
     /* -----------------------------------------
      CONFIGURACIÓN CONTAINER QUERY
      ----------------------------------------- */
@@ -98,7 +99,7 @@
     }
 
     /* -----------------------------------------
-       Acordeón  (BEM correcto)
+       Acordeón
     ----------------------------------------- */
     &__accordion {
       margin-top: 4rem;
@@ -120,6 +121,7 @@
       .accordion-button {
         font-size: 1.1rem;
         color: $color-dark;
+        padding: 1rem;
 
         &:not(.collapsed) {
           background: $color-primary;
@@ -130,8 +132,38 @@
       .accordion-body {
         font-size: 1rem;
         color: $gray-700;
+        padding: 1rem;
       }
     }
+  }
+
+  /* -----------------------------------------
+       Modal
+    ----------------------------------------- */
+
+  .modal-dialog {
+    max-width: 600px; 
+    margin: 1.75rem auto;
+  }
+  
+  .modal-body img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+  }
+
+  .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .modal-header .btn-close {
+    margin: 0;
   }
 }
 
@@ -165,91 +197,3 @@
     }
   }
 }
-
-/* ==========================================================
-   Modal
-   ========================================================== */
-
-  .gallery-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1050;
-    display: none; // estado base
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    outline: 0;
-
-    &--show {
-      display: block; // estado visible
-    }
-  }
-
-  .gallery-modal__dialog {
-    position: relative;
-    width: auto;
-    margin: 1.75rem auto;
-    max-width: 900px;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-  }
-
-  .gallery-modal__content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    pointer-events: auto;
-    background-color: $blanco;
-    border-radius: 0.5rem;
-    overflow: hidden;
-  }
-
-  .gallery-modal__body {
-    flex: 1 1 auto;
-    padding: 0;
-  }
-
-  .gallery-modal__image {
-    width: 100%;
-    height: auto;
-    max-height: 85vh;
-    object-fit: contain;
-  }
-
-  /* Botón de cierre */
-  .gallery-modal__close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 0.25rem;
-
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-
-    &::before {
-      content: "×";
-      font-size: 2rem;
-      line-height: 1;
-      color: $gray-700;
-    }
-
-    &:hover::before {
-      color: $gray-900;
-    }
-  }
-
-  /* Fondo oscuro del modal */
-  .gallery-modal::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-color: rgb(0 0 0 / 60%);
-    z-index: -1;
-  }

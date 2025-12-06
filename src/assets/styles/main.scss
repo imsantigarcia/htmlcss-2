@@ -1,41 +1,51 @@
 /**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
+ * MAIN.SCSS
+ * Bootstrap aislado
  */
 
+/* -------------------------------------------------------------
+   1) Orden de cascada
+   ------------------------------------------------------------- */
+@layer bootstrap, base, components;
+
+/* -------------------------------------------------------------
+   2) Bootstrap aislado
+   ------------------------------------------------------------- */
+@layer bootstrap {
+  @import "dependencies"; //
+}
+
+/* -------------------------------------------------------------
+   3) Variables globles
+   ------------------------------------------------------------- */
+@import "settings/colors";     // Colores OKLCH (PEC)
+@import "settings/variables";  // Tipografías, tamaños, etc.
+
+/* -------------------------------------------------------------
+   4) Estilos
+   ------------------------------------------------------------- */
+@layer base {
+  @import "generic/reset";
+  @import "settings/icons";
+  @import "tools/functions";
+
+  @import "elements/base";
+  @import "objects/layout";
+}
+
+/* -------------------------------------------------------------
+   5) Componentes y páginas
+   ------------------------------------------------------------- */
+@layer components {
+  @import "components/header";
+  @import "components/footer";
+
+  @import "pages/index";
+  @import "pages/speakers";
+  @import "pages/articulo";
+  @import "pages/extra";
+}
+
 /**
- * Import dependencies
- */
-
-// 1. Settings
-@import "generic/reset";
-@import "settings/variables";
-@import "settings/colors";
-@import "settings/icons";
-
-// 2. Tools
-@import "tools/functions";
-
-// 4. Elements
-@import "elements/base";
-
-// 5. Objects
-@import "objects/layout";
-
-// 6. Components (BEM)
-@import "components/header";
-@import "components/footer";
-
-// 7. Utilities
-
-/**
- * Page layouts
- */
-@import "pages/index";
-@import "pages/speakers";
-@import "pages/articulo";
-@import "pages/extra";
-
-/**
- * Do NOT include anything else in this file!
+ * Fin
  */

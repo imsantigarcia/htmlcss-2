@@ -10,50 +10,23 @@
     Breadcrumbs
     ========================================================== */
 
-    .extra__breadcrumbs {
+@layer components {
+  .extra__breadcrumbs {
+
+    .extra__breadcrumbs-list {
       margin: 2rem auto;
       display: flex;
       width: fit-content;
     }
 
-    .breadcrumbs {
+    .breadcrumb {
       display: flex;
-      list-style: none;
-      padding: 0;
-      gap: 0.5rem;
-
-      font-size: 0.95rem;
-      color: $gray-700;
     }
 
-    .breadcrumbs__item {
-      color: $gray-700;
-      font-weight: 300;
-
-      &::after {
-        content: "/";
-        margin-left: 0.5rem;
-        color: $gray-500;
-      }
-
-      &:last-child::after {
-        content: "";
-      }
+    .breadcrumb-item + .breadcrumb-item::before {
+      margin: 0 0.5rem;
     }
+  }
+}
 
-    .breadcrumbs__link {
-      color: $color-primary;
-      text-decoration: none;
-      font-weight: 400;
 
-      &:hover {
-        text-decoration: underline;
-        color: color-mix(in oklch, $color-primary 80%, $color-dark 20%);
-      }
-    }
-
-    .breadcrumbs__item--active {
-      color: $gray-500;
-      pointer-events: none;
-      font-weight: 300;
-    }
