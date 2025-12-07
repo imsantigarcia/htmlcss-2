@@ -103,7 +103,6 @@
    -------------------------------------------------------- */
 
 @layer overrides {
-  /* ANIMACIÓN: Hamburguesa → X */
   .header__burger.header__burger--active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
@@ -116,14 +115,11 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* --- Desktop (container query) --- */
   @container header (min-width: 700px) {
-    /* Ocultar hamburguesa en desktop */
     .header__burger {
       display: none;
     }
 
-    /* Convertir el menú en horizontal y alinear a la derecha */
     .header__nav-list--mobile {
       position: static;
       height: auto;

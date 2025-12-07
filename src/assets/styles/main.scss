@@ -12,7 +12,7 @@
    2) Bootstrap aislado
    ------------------------------------------------------------- */
 @layer bootstrap {
-  @import "dependencies"; //
+  @import "dependencies";
 }
 
 /* -------------------------------------------------------------
@@ -28,7 +28,6 @@
   @import "generic/reset";
   @import "settings/icons";
   @import "tools/functions";
-
   @import "elements/base";
   @import "objects/layout";
 }
@@ -39,7 +38,6 @@
 @layer components {
   @import "components/header";
   @import "components/footer";
-
   @import "pages/index";
   @import "pages/speakers";
   @import "pages/articulo";
